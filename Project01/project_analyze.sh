@@ -1,24 +1,25 @@
-printf "________________________________________________________ \n Greetings, user $USER on $HOSTMANE:\n"
+printf "________________________________________________________ \n Greetings, user $USER on $HOSTMANE:\n" #TODO: Prettify User Interface
 cd ~/CS1XA3
 printf "Codes executed from:"
 pwd
 
 input="Something"
-features="TODO.sh | dummyfeature2"
-
+features="filetypecount.sh | dummyfeature2"
+#TODO: Inplement TODO scanner
 
 while : ; do
     echo "Features avaiable: " $features
-    echo -n "Please enter name of the bash script you would like to execute: Enter break to exit. "
+    echo -n "Please enter name of the bash script you would like to execute: Enter 'quit' to exit. "
     read input
     if [ -z "input" ]
         then break
     fi
-
+#TODO: use codes that utilize #
     case $input in
-        TODO.sh)
-            echo "Executing TODO.sh\n\n"
-	    sh TODO.sh
+        filetypecount.sh)
+            echo "Executing filetypecount.sh\n\n"
+	    /bin/bash ~/CS1XA3/Project01/filetypecount.sh
+
             ;;
         dummyfeature2)
             echo "Executing fumyfeature\n\n"
@@ -29,5 +30,5 @@ while : ; do
 	*)
 	    echo "The feature you have requested is currently not available:( Come back later! \n\n"
     esac
-done 
-echo "no inputs"
+done #TODO: Reconstruct cases, cover more conditions.
+echo "Program existed"
