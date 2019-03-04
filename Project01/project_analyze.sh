@@ -1,10 +1,11 @@
+#!/bin/bash
 printf "________________________________________________________ \n Hello, user $USER \n" #TODO: Prettify User Interface
 cd ~/CS1XA3
 printf "Codes executed from:"
 pwd
 
 input="Placeholder"
-features="filetypecount   todologs   mergelogs   deletetempfiles"
+features="filetypecount   todologs   mergelogs   deletetempfiles   compileerrorlog   functionalfiles"
 #TODO: Inplement TODO scanner
 
 while : ; do
@@ -33,6 +34,13 @@ while : ; do
 	    printf 'Execute deletetempfiles.sh\n\n'
 	    /bin/bash ~/CS1XA3/Project01/deletetempfiles.sh
             ;;
+	compileerrorlog)
+	    printf 'Execute compileerrorlog.sh\n\n'
+	    /bin/bash ~/CS1XA3/Project01/deletetempfiles.sh
+	    ;;
+	functionalfiles)
+	    printf 'Execute functionalfiles.sh\n\n'
+	    /bin/bash ~/CS1XA3/Project01/functionalfiles.sh
         quit)
             break
             ;;
