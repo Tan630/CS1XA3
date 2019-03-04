@@ -1,34 +1,43 @@
-printf "________________________________________________________ \n Greetings, user $USER on $HOSTMANE:\n" #TODO: Prettify User Interface
+printf "________________________________________________________ \n Hello, user $USER \n" #TODO: Prettify User Interface
 cd ~/CS1XA3
 printf "Codes executed from:"
 pwd
 
-input="Something"
-features="filetypecount.sh | dummyfeature2"
+input="Placeholder"
+features="filetypecount   todologs   mergelogs   deletetempfiles"
 #TODO: Inplement TODO scanner
 
 while : ; do
-    echo "Features avaiable: " $features
-    echo -n "Please enter name of the bash script you would like to execute: Enter 'quit' to exit. "
+    printf "Features avaiable: \n"
+    printf "\-\- %s\n" $features
+    printf "Please enter name of the bash script you would like to execute: Enter 'quit' to exit. "
     read input
     if [ -z "input" ]
         then break
     fi
 #TODO: use codes that utilize #
     case $input in
-        filetypecount.sh)
-            echo "Executing filetypecount.sh\n\n"
+        filetypecount)
+            printf 'Executing filetypecount.sh\n\n'
 	    /bin/bash ~/CS1XA3/Project01/filetypecount.sh
-
             ;;
-        dummyfeature2)
-            echo "Executing fumyfeature\n\n"
+        todologs)
+            printf 'Executing todologs.sh\n\n'
+	    /bin/bash ~/CS1XA3/Project01/todologs.sh
+	    ;;
+	mergelogs)
+	    printf 'Executing mergelogs.sh\n\n'
+	    /bin/bash ~/CS1XA3/Project01/mergelogs.sh
+	    ;;
+	deletetempfiles)
+	    printf 'Execute deletetempfiles.sh\n\n'
+	    /bin/bash ~/CS1XA3/Project01/deletetempfiles.sh
             ;;
         quit)
             break
             ;;
 	*)
-	    echo "The feature you have requested is currently not available:( Come back later! \n\n"
+	    printf "The feature you requested is currently unavaliable :( Come back later! \n\n"
     esac
 done #TODO: Reconstruct cases, cover more conditions.
-echo "Program existed"
+printf "Program existed\n"

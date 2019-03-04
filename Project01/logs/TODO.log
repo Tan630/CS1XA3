@@ -1,0 +1,6 @@
+./Project01/project_analyze.sh:printf "________________________________________________________ \n Hello, user $USER on $HOSTMANE:\n" #TODO: Prettify User Interface
+./Project01/project_analyze.sh:#TODO: Inplement TODO scanner
+./Project01/project_analyze.sh:#TODO: use codes that utilize #
+./Project01/project_analyze.sh:done #TODO: Reconstruct cases, cover more conditions.
+./Project01/todologs.sh:grep "#TODO" -r . --exclude-dir=logs > ~/CS1XA3/Project01/logs/TODO.log
+./Project01/README.md:	Upon execution this script will put each line in every file in repo with the tag #TODO into a file todo.log
