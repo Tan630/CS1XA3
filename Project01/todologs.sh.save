@@ -1,0 +1,5 @@
+#!/bin/bash
+
+grep "#TODO" -r ./ > ~CS1XA3/Project01/logs/TODO.logrep "#TODO" -r ./ > ~CS1XA3/Project01/logs/TODO.log
+
+

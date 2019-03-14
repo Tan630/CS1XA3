@@ -1,0 +1,17 @@
+#!/bin/bash
+for file in `pwd` ; do
+	printf "wwwww"
+  	if [[ $file =~ \.py$ ]]
+	then
+		p
+ython file
+		printf "2222"
+	fi
+
+	if [[ $file =~ \.hs$ ]]
+	then
+		haskell file
+		printf "1111"
+	fi
+  	# now we can loop over all the files having the current extension
+done

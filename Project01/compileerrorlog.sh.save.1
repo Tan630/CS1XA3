@@ -1,0 +1,14 @@
+#!/bin/bash
+for file in $(find ~/ -type f ) ; do
+str1=""
+  	if [[ $file =~ \.py$ ]]
+	then
+		str1=`python -m py_compile script.py`
+	fi
+
+	if [[ $file =~ \.hs$ ]]
+	then
+		printf "1111"
+	fi
+  	# now we can loop over all the files having the current extension
+done
