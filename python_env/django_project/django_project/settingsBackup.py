@@ -20,23 +20,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#+%!_y(=(&n$^v(*^@)#nzp%*tylpzkl(%vq0&(jls-lg(d#%a'
+SECRET_KEY = 'u0id9t19ldrlzvyq^ophvw4a3lt(n3^d=jp63(#(+k2%v0e#xq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
 INSTALLED_APPS = [
-    #'modeltest.apps.ModeltestConfig',
-    #'testrequests.apps.TestrequestsConfig',
-    #'helloapp.apps.HelloappConfig',
-    #'jsontest.apps.JsontestConfig',
-    #'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,8 +40,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
