@@ -88,7 +88,7 @@
       content: ":3";
       font-family: "FontAwesome";
       color: #757575;
-      position: absolute;
+      position: relative;
       top: 10px;
       left: 0;
       right: 0;
@@ -195,7 +195,7 @@
               <h4 class="modal-title">Cat Upload</h4>
             </div>
             <div class="modal-body">
-              <div class="container">
+              <div class="container-fluid center-block">
                 <div class="cat-upload">
                   <div class="cat-edit">
                     <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -228,7 +228,7 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Download Cat</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body center-block">
               <p>You sure you want to download this cat?</p>
               <img id="modalImgCatDisplay" src="assets/pic1.jpg" alt="Cat" style="height:100%; width:100%">
             </div>
@@ -314,7 +314,7 @@
   
   function catPicUpdate () {
     document.getElementById("modalImgCatDisplay").src = document.getElementsByClassName("item active")[0].childNodes[1].src;
-    document.getElementById("modalBtnCatDownloadYes").innerHTML = document.getElementsByClassName("item active")[0].childNodes[1].src;
+    document.getElementById("modalBtnCatDownloadYes").href = document.getElementsByClassName("item active")[0].childNodes[1].src;
   }
   //href = document.getElementById("modalImgCatDisplay").src;
 
