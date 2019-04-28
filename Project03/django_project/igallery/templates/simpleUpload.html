@@ -1,0 +1,29 @@
+
+
+<!--
+<div class="jumbotron text-center" background-color="lightblue">
+    <p>
+        {% if user.is_authenticated %}
+        <form action="/igallery/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Submit">
+        </form>
+        {% else %}
+        <a href="{% url 'login' %}?next={{request.path}}">I don't know how you got there but please login first</a>
+        {% endif %}
+    </p> 
+</div>
+-->
+
+
+<form action="/igallery/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ upload_form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ upload_form.image.errors }}
+        <label for="{{ form.image.id_for_label }}">Upload Image:</label>
+        {{ upload_form.image }}
+    </div>
+    <input type="submit" value="Submit">
+</form>
